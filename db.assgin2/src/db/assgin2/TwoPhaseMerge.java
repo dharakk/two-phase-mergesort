@@ -6,7 +6,7 @@ public class TwoPhaseMerge {
 
 	
 		public static void main(String[] st){
-			Metadata metadata = new Metadata("samples/sample1/metadata.txt",Runtime.getRuntime().totalMemory());
+			Metadata metadata = new Metadata("samples/sample1/metadata.txt",(long)(Runtime.getRuntime().totalMemory()*0.8));
 			ArrayList<String> tempfiles;
 			Partition pr  = new Partition(metadata,"samples/sampe1/metadta.txt");
 			tempfiles = pr.divideAndSort();
