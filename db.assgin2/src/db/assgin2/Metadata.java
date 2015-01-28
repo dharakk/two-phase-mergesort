@@ -44,7 +44,7 @@ public class Metadata {
 	}
 	
 	long getRecordSize(){
-		return rec_size;
+		return 5*rec_size;
 	}
 	
 	long getAllowedRAM(){
