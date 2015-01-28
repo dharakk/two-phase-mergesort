@@ -12,10 +12,14 @@ public class Metadata {
 	long M;
 	long ram;
 	int cols;
+	int[] sort_cols;
+	String mode;
 	
-	public Metadata(String filename,long mem){
+	public Metadata(String filename,long mem,int[] sortcolumns,String smode){
 		try {
+			mode=smode;
 			ram = mem;
+			sort_cols=sortcolumns;
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename)));
 			cols=0;
 			
@@ -45,5 +49,14 @@ public class Metadata {
 	
 	long getAllowedRAM(){
 		return ram;
+	}
+
+	public int[] getSortFields() {
+		// TODO Auto-generated method stub
+		return sort_cols;
+	}
+
+	public String getMode() {
+		return mode;
 	}
 }
